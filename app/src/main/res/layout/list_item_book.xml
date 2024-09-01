@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/book"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="5dp">
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:id="@+id/collapsedRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="220dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/imgBook"
+                android:src="@mipmap/portrait"
+                android:layout_centerHorizontal="true">
+
+            </ImageView>
+
+            <TextView
+                android:id="@+id/bookName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Book Name"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_marginTop="16dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/imgBook">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/btnDownArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_down_arrow"
+                android:layout_below="@id/imgBook"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="16dp">
+
+            </ImageView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/expandedRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/collapsedRelativeLayout"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author:"
+                android:id="@+id/author"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Author Name"
+                android:id="@+id/txtAuthor"
+                android:layout_below="@id/author"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"/>
+            
+            <TextView
+                android:id="@+id/shortDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Short Description:"
+                android:layout_marginLeft="10dp"
+                android:layout_below="@id/txtAuthor"
+                android:layout_marginTop="5dp">
+
+            </TextView>
+
+            <ImageView
+                android:id="@+id/btnUpArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_up_arrow"
+                android:layout_below="@id/shortDescription"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delete"
+                android:layout_below="@id/shortDescription"
+                android:layout_toStartOf="@id/btnUpArrow"
+                android:layout_marginEnd="7dp"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/red"
+                android:id="@+id/btnDelete"
+                android:visibility="gone">
+
+
+            </TextView>
+
+
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</com.google.android.material.card.MaterialCardView>
